@@ -7,8 +7,8 @@ import axios from 'axios';
 export class AxiosService {
 
   constructor() {
-    axios.defaults.baseURL = 'http://localhost:8080';
-    axios.defaults.headers.post['Content-Type'] = 'application/json';
+    axios.defaults.baseURL = 'http://localhost:8080'
+    axios.defaults.headers.post["Content-Type"] = 'application/json'
   }
 
   getAuthToken(): string | null {
@@ -23,19 +23,19 @@ export class AxiosService {
     }
   }
 
-
   request(method: string, url: string, data: any): Promise<any> {
-      let headers: any = {};
+    let headers: any = {};
 
-      if (this.getAuthToken() !== null) {
-          headers = {"Authorization": "Bearer " + this.getAuthToken()};
-      }
+    if (this.getAuthToken() !== null) {
+      headers = { "Authorization": "Bearer " + this.getAuthToken() };
+    }
 
-      return axios({
-          method: method,
-          url: url,
-          data: data,
-          headers: headers
-      });
+    return axios({
+      method: method,
+      url: url,
+      data: data,
+      headers: headers
+    });
   }
+
 }

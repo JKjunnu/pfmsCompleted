@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-	@Input() pageTitle!: string;
-	@Input() logoSrc!: string;
+
+  @Input() pageTitle!: string;
+  @Input() logoSrc!: string;
+
 }

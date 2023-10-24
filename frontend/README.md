@@ -1,61 +1,27 @@
-# Frontend
+# PfmsFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
-Angular Frontend connected to a Spring Boot backend.
+## Development server
 
-The frontend is as simple as possible to just show the logic of authentication via a JWT.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-## Run on local
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```
-yarn start
-```
+## Build
 
-The application will run on `http://localhost:4200`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Components
+## Running unit tests
 
-### App Component
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Main wrapper component. It has no logic inside. It just places the Header and the AppContent.
+## Running end-to-end tests
 
-### Content Component
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Displays the Buttons and the Content of the application.
+## Further help
 
-The Buttons are there to show the login form or logout the user.
-
-At the beginning, nothing is shown but the WelcomeContent component with a welcome message.
-
-Once authenticated via the login form, the AppContent component displays the AuthContent component with the protected information.
-
-### Buttons Component
-
-It displays two buttons. The login button only displays the login form. The logout button removes all the authentication information of the user.
-
-### Header Component
-
-Static header with the title and the logo.
-
-### Login Form Component
-
-Displays a splitted Form with the Login form on one side and the register form on the other side. 
-
-Submitting one form or the other will request different endpoints in the backend.
-
-### Welcome Content Component
-
-Simple component which displays a Welcome message.
-
-## Authentication
-
-The authentication used is JWT. First, the user must login in the backend with a username and password.
-
-If the credentials are correct, a JWT will be returned.
-
-The JWT will be stored in the localstorage for further usage.
-
-When available the JWT will be sent in the Authorization Header for each requests made with axios.
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
